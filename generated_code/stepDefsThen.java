@@ -1,13 +1,6 @@
-package cinnamontest.stepdefs;
-
-import com.google.inject.Inject;
-import com.nttdata.cinnamon.driver.Driver;
+package com.everis.stepsdef;
 
 
-public class stepDefsThen extends BaseStep{ 
-	private final SearchInGooglePage searchingooglepage;
 
-	private final Driver driver;
-
-
+public class stepDefsThen{ 
 }
