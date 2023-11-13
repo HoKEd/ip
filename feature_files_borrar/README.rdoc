@@ -1,0 +1,38 @@
+= Gherkin
+
+Fast Gherkin lexer and parser based on Ragel. Gherkin is two things:
+
+* The language that has evolved out of the Cucumber project.
+* This library
+
+== Running RSpec and Cucumber tests
+
+rake clean spec cucumber
+
+== Release process
+
+* Run "rake clean spec cucumber" for each platform (1.8.6, 1.8.7, 1.9, jruby) to make sure all is green.
+* rvm 1.8.7
+* Bump version in the VERSION file
+* rake clean jar compile
+* rake gemspec
+* git commit -a -m "Release vX.Y.Z"
+* rake release
+* ./nativegems.sh
+* gem push pkg/... (for each native gem)
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Run rake ragel:rb to generate all the I18N lexers
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with Rakefile, VERSION, or History.txt.
+  (if you want to have your own version, that is fine but
+   bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2009 Mike Sassak, Gregory Hnatiuk, Aslak Hellesøy. See LICENSE for details.
