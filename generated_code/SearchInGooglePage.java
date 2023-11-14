@@ -8,6 +8,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SearchInGooglePage{ 
+	@Find(by = By.Name, locator="Buscar")
+	public InputTextField Buscar;
+
+	@Find(by = By.Name, locator="Buscar")
+	public Element Buscar730;
+
 	@Find(by = By.XPath, locator = "//body")
 	public Element formTitle;
 
