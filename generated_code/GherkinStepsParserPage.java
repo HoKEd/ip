@@ -8,6 +8,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class GherkinStepsParserPage{ 
+	@Find(by = By.Name, locator="following")
+	public InputTextField following296;
+
+	@Find(by = By.Name, locator="following")
+	public InputTextField following470;
+
+	@Find(by = By.Name, locator="line")
+	public Element line;
+
+	@Find(by = By.Name, locator="following")
+	public InputTextField following;
+
 	@Find(by = By.XPath, locator = "//body")
 	public Element formTitle;
 

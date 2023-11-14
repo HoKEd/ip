@@ -13,6 +13,9 @@ public class PrettyPrinterPage{
 
 	private final String TITLE = "";
 
+	@Find(by = By.Name, locator="representation")
+	public Element representation;
+
 
 	/** null
 	 */
