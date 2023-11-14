@@ -5,7 +5,7 @@ import com.everis.scrapping.ByScrap;
 import org.openqa.selenium.WebDriver;
 
 
-public class GherkinStepsParserPage{ 
+public class LoggingInPage{ 
 	public static WebDriver driver;
 
 
