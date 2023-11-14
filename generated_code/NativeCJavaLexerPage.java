@@ -8,12 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class NativeCJavaLexerPage{ 
-	@Find(by = By.Name, locator="following")
-	public InputTextField following;
-
-	@Find(by = By.Name, locator="following")
-	public InputTextField following106;
-
 	@Find(by = By.XPath, locator = "//body")
 	public Element formTitle;
 
