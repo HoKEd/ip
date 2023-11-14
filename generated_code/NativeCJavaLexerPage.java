@@ -1,12 +1,34 @@
-package com.everis.stepsdef;
+package cinnamontest.pages;
 
-import org.openqa.selenium.By;
-import com.everis.scrapping.ByScrap;
-import org.openqa.selenium.WebDriver;
+import com.nttdata.cinnamon.driver.By;
+import com.nttdata.cinnamon.driver.Find;
+import com.nttdata.cinnamon.driver.controls.Element;
+import com.nttdata.cinnamon.driver.controls.InputTextField;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class NativeCJavaLexerPage{ 
-	public static WebDriver driver;
+	@Find(by = By.Name, locator="following")
+	public InputTextField following;
 
+	@Find(by = By.Name, locator="following")
+	public InputTextField following106;
+
+	@Find(by = By.XPath, locator = "//body")
+	public Element formTitle;
+
+	private final String TITLE = "";
+
+
+	/** null
+	 */
+	
+	public boolean isPageDisplayed() {
+		assertThat(this.formTitle.isDisplayed())
+			                .withFailMessage("Title element not displayed!")
+			                .isTrue();
+		
+			        return this.formTitle.getText().equals(TITLE);
+	}
 
 }
