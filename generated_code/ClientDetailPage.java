@@ -5,12 +5,10 @@ import com.everis.scrapping.ByScrap;
 import org.openqa.selenium.WebDriver;
 
 
-public class SearchInGooglePage{ 
+public class ClientDetailPage{ 
 	public static WebDriver driver;
 
-	public static By Search = ByScrap.closestFieldWithLabel("Search");
-
-	public static By Search278 = ByScrap.textInside("Search");
+	public static By following = ByScrap.closestFieldWithLabel("following");
 
 
 }
