@@ -11,13 +11,13 @@ public class SearchInGooglePage{
 	@Find(by = By.Name, locator="Buscar")
 	public InputTextField Buscar;
 
+	@Find(by = By.Name, locator="Buscar")
+	public Element Buscar216;
+
 	@Find(by = By.XPath, locator = "//body")
 	public Element formTitle;
 
 	private final String TITLE = "";
-
-	@Find(by = By.Name, locator="Buscar")
-	public Element Buscar150;
 
 
 	/** null
