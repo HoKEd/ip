@@ -1,16 +1,28 @@
-package com.everis.stepsdef;
+package cinnamontest.pages;
 
-import org.openqa.selenium.By;
-import com.everis.scrapping.ByScrap;
-import org.openqa.selenium.WebDriver;
+import com.nttdata.cinnamon.driver.By;
+import com.nttdata.cinnamon.driver.Find;
+import com.nttdata.cinnamon.driver.controls.Element;
+import com.nttdata.cinnamon.driver.controls.InputTextField;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SearchInGooglePage{ 
-	public static WebDriver driver;
+	@Find(by = By.XPath, locator = "//body")
+	public Element formTitle;
 
-	public static By Search = ByScrap.closestFieldWithLabel("Search");
+	private final String TITLE = "";
 
-	public static By Search139 = ByScrap.textInside("Search");
 
+	/** null
+	 */
+	
+	public boolean isPageDisplayed() {
+		assertThat(this.formTitle.isDisplayed())
+			                .withFailMessage("Title element not displayed!")
+			                .isTrue();
+		
+			        return this.formTitle.getText().equals(TITLE);
+	}
 
 }
