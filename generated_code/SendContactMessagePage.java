@@ -30,6 +30,9 @@ public class SendContactMessagePage{
 	@Find(by = By.Name, locator="Last Name")
 	public InputTextField LastName;
 
+	@Find(by = By.Name, locator="Job")
+	public Element Job;
+
 	private final String TITLE = "";
 
 	@Find(by = By.Name, locator="Send Message")
