@@ -1,27 +1,31 @@
-package com.everis.stepsdef;
+package cinnamontest.pages;
 
-import org.openqa.selenium.By;
-import com.everis.scrapping.ByScrap;
-import org.openqa.selenium.WebDriver;
-import com.nttdata.selenium;
+import com.nttdata.cinnamon.driver.By;
+import com.nttdata.cinnamon.driver.Find;
+import com.nttdata.cinnamon.driver.controls.Element;
+import com.nttdata.cinnamon.driver.controls.InputTextField;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class SendContactMessagePage{ 
-	public static By SendMessage = ByScrap.textInside("SendMessage");
+	@Find(by = By.Name, locator="I click the Send Message button")
+	public Element IclicktheSendMessagebutton;
 
-	public static WebDriver driver;
+	@Find(by = By.XPath, locator = "//body")
+	public Element formTitle;
 
-	public static By Yourmessagefield = ByScrap.closestFieldWithLabel("Yourmessagefield");
+	private final String TITLE = "";
 
-	public static By FirstName = ByScrap.closestFieldWithLabel("FirstName");
 
-	public static By LastName = ByScrap.closestFieldWithLabel("LastName");
-
-	public static By Phone = ByScrap.closestFieldWithLabel("Phone");
-
-	public static By SelectfieldLabel = ByScrap.closestSelectWithLabel("SelectfieldLabel");
-
-	public static By Company = ByScrap.closestFieldWithLabel("Company");
-
+	/** null
+	 */
+	
+	public boolean isPageDisplayed() {
+		assertThat(this.formTitle.isDisplayed())
+			                .withFailMessage("Title element not displayed!")
+			                .isTrue();
+		
+			        return this.formTitle.getText().equals(TITLE);
+	}
 
 }
