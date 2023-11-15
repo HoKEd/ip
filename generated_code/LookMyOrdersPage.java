@@ -8,6 +8,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class LookMyOrdersPage{ 
+	@Find(by = By.Name, locator="following")
+	public InputTextField following;
+
 	@Find(by = By.XPath, locator = "//body")
 	public Element formTitle;
 
