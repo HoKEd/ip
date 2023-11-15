@@ -1,50 +1,16 @@
-package cinnamontest.pages;
+package com.everis.stepsdef;
 
-import com.nttdata.cinnamon.driver.By;
-import com.nttdata.cinnamon.driver.Find;
-import com.nttdata.cinnamon.driver.controls.Element;
-import com.nttdata.cinnamon.driver.controls.InputTextField;
-import static org.assertj.core.api.Assertions.assertThat;
-import com.nttdata.cinnamon.modules.selenium.controls.SelectControl;
+import org.openqa.selenium.By;
+import com.everis.scrapping.ByScrap;
+import org.openqa.selenium.WebDriver;
 
 
 public class SendContactMessagePage{ 
-	@Find(by = By.Name, locator="Company")
-	public InputTextField Company;
+	public static By SendMessage = ByScrap.textInside("SendMessage");
 
-	@Find(by = By.Name, locator="Your message field")
-	public InputTextField Yourmessagefield;
+	public static WebDriver driver;
 
-	@Find(by = By.Name, locator="First Name")
-	public InputTextField FirstName;
+	public static By Phone = ByScrap.closestFieldWithLabel("Phone");
 
-	@Find(by = By.Name, locator="Phone")
-	public InputTextField Phone;
-
-	@Find(by = By.Name, locator="Select field Label")
-	public SelectControl SelectfieldLabel;
-
-	@Find(by = By.XPath, locator = "//body")
-	public Element formTitle;
-
-	@Find(by = By.Name, locator="Last Name")
-	public InputTextField LastName;
-
-	private final String TITLE = "";
-
-	@Find(by = By.Name, locator="Send Message")
-	public Element SendMessage;
-
-
-	/** null
-	 */
-	
-	public boolean isPageDisplayed() {
-		assertThat(this.formTitle.isDisplayed())
-			                .withFailMessage("Title element not displayed!")
-			                .isTrue();
-		
-			        return this.formTitle.getText().equals(TITLE);
-	}
 
 }
