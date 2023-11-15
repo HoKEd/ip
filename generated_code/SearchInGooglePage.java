@@ -10,7 +10,7 @@ public class SearchInGooglePage{
 
 	public static WebDriver driver;
 
-	public static By Buscar658 = ByScrap.textInside("Buscar");
+	public static By Buscar976 = ByScrap.textInside("Buscar");
 
 
 }
