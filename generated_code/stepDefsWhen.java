@@ -54,7 +54,7 @@ public class stepDefsWhen{
 	 */
 	@And("^I click the Search button$")
 	public void iClickSearchButton() {
-		WebElement obj = SearchInGooglePage.driver.findElement(SearchInGooglePage.Search985);
+		WebElement obj = SearchInGooglePage.driver.findElement(SearchInGooglePage.Search822);
 		obj.click();
 	}
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 
 public class SearchInGooglePage{ 
-	public static By Search985 = ByScrap.textInside("Search");
+	public static By Search822 = ByScrap.textInside("Search");
 
 	public static WebDriver driver;
 
