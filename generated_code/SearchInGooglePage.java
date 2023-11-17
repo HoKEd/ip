@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 
 public class SearchInGooglePage{ 
+	public static By Search449 = ByScrap.textInside("Search");
+
 	public static WebDriver driver;
+
+	public static By Search = ByScrap.closestFieldWithLabel("Search");
 
 
 }
