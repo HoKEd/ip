@@ -8,7 +8,5 @@ import org.openqa.selenium.WebDriver;
 public class LookMyOrdersPage{ 
 	public static WebDriver driver;
 
-	public static By following = ByScrap.closestFieldWithLabel("following");
-
 
 }
